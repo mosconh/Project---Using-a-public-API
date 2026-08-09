@@ -45,7 +45,6 @@ app.post("/get-city", async (req, res) => {
         // 404 (Not Found) - 401 (Unauthorized), you need the api key.
     } catch (error) {
         console.error("Error fetching weather data:", error.message);
-
         let errorMessage = "City not found. Please try again.";
         if (error.response) {
             if (error.response.status === 404) {

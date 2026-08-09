@@ -52,13 +52,6 @@ button {
     background-color: transparent;
 }
 
-#city-info {
-    display: none;
-    margin-top: 20px;
-}
-#city-info.show {
-    display: block;
-}
 
 h1 {
     text-align: center;
