@@ -30,7 +30,8 @@ app.post("/get-city", async (req, res) => {
     // try and catch for the post method, you can use .then and .catch, 
     // but I was taught it is a little old but both work fine I just prefered the try and catch
     //the try catches the data from the user and the params are needed (check api documentation)
-    //It took me a while to understand the params and where to put it 🥲
+    //It took me a while to understand the params and where to put it 🥲 
+    // I'm using the metrics system but you can change it in the params: units
     try {
         const response = await axios.get(API_URL, {
             params: {
