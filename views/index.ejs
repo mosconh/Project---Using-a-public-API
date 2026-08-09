@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/main.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+            integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Weather App</title>
+    </head>
+    <body>
+
+        <!-- this "div" is just the initial form on the home page
+         where you have to type in the city to show the information
+         regarding the weather from your city -->
+
+        <div id="container">
+            <form id="search" method="POST" action="/get-city">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <input
+                    type="search"
+                    name="city"
+                    id="city-name"
+                    placeholder="type in your city"
+                />
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <!-- After you typed in your city this "If" is trigged and shows the rest of the information
+             I was going to leave two "Ifs" but I wanted something more minimalist and not leave the website polluted with
+             information. You can use an "Else" and copy the code after "div" (id="city-info") but make sure
+             you remove the ejs embedded. -->
+
+              <% if (locals.error) { %>
+                <div id="error-message">
+                    <%= error %>
+                </div>
+            <% } %>
+
+            <% if (locals.weather) { %> 
+
+            <div id="city-info" class="show">
+                <h1 id="title"><%= weather.name %></h1>
+                <div id="infos">
+                    <div id="temp">
+                        <img
+                            id="temp-img"
+                            src="images/cloudy.png"
+                            alt="image showing weather information"
+                        />
+                        <div>
+                            <p id="temp-value"><%= Math.round(weather.main.temp) %><sup>°C</sup></p>
+                            <p id="temp-description"><%= weather.weather[0].description %></p>
+                        </div>
+                    </div>
+
+                    <div id="extra-info">
+                        <div class="info" id="max-temperature">
+                            <i
+                                id="temp_max_icon"
+                                class="fa-solid fa-temperature-low"
+                            ></i>
+                            <div>
+                                <h2 class="temp-info">Max temp.</h2>
+                                <p id="temp-max"><%= Math.round(weather.main.temp_max) %><sup>°C</sup></p>
+                            </div>
+                        </div>
+
+                        <div class="info" id="Low">
+                            <i
+                                id="temp_low_icon"
+                                class="fa-solid fa-temperature-high"
+                            ></i>
+
+                            <div>
+                                <h2 class="temp-info">Low temp.</h2>
+                                <p id="temp-low"><%= Math.round(weather.main.temp_min) %><sup>°C</sup></p>
+                            </div>
+                        </div>
+
+                        <div class="info" id="humidity">
+                            <i
+                                id="humidity_icon"
+                                class="fa-solid fa-droplet"
+                            ></i>
+                            <div>
+                                <h2 class="temp-info">Humidity</h2>
+                                <p id="humidity"><%= weather.main.humidity%>%</p>
+                            </div>
+                        </div>
+
+                        <div class="info" id="wind-speed">
+                            <i id="wind_icon" class="fa-solid fa-wind"></i>
+                            <div>
+                                <h2 class="temp-info">Wind</h2>
+                                <p id="wind"><%= (weather.wind.speed * 3.6).toFixed(1) %>km/h</p>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+            <% } %>
+        </div>
+        
+    </body>
+</html>
