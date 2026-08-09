@@ -30,3 +30,4 @@ I started by deciding which API I was going to use, the public APIs was given by
 - Run it with live server
 
 ### 🫴🏽**Preview**
+[![Watch the video](https://github.com/user-attachments/assets/da4baed7-7a21-4ea1-b6e5-31cb2f1a3366)](https://github.com/user-attachments/assets/da4baed7-7a21-4ea1-b6e5-31cb2f1a3366)
