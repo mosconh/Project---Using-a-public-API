@@ -26,7 +26,7 @@ I started by deciding which API I was going to use, the public APIs were given b
 
 - Clone the repository
 - Open in your editor of choice (I use VS Code)
-- Install missing
+- Install missing dependencies 
 - Run it with live server
 
 ### 🫴🏽**Preview**
