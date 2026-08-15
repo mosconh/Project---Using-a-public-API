@@ -7,7 +7,7 @@ const app = express();
 const port = 4000;
 
 // API key and the URL for the public API, the api key is requested I had to create an account on their website.
-const API_KEY = "7c8840a953e5e4243fa7c387a977c064"; //Use your API KEY from the API website, just create an account and paste here.
+const API_KEY = ""; //Use your API KEY from the API website, just create an account and paste here.
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
 // Set EJS as the view engine
