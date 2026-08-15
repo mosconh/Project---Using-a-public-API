@@ -7,7 +7,7 @@ const app = express();
 const port = 4000;
 
 // API key and the URL for the public API, the api key is requested I had to create an account on their website.
-const API_KEY = "7c8840a953e5e4243fa7c387a977c064";
+const API_KEY = "7c8840a953e5e4243fa7c387a977c064"; //Use your API KEY from the API website, just create an account and paste here.
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
 // Set EJS as the view engine
@@ -24,13 +24,13 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/get-city", async (req, res) => {
-    // req.body.city retrieves the attribute name inside the input (index.ejs) 
+    // req.body.city retrieves the attribute name inside the input (index.ejs)
     // and stores the data typed by the user
     const city_Name = req.body.city;
-    // try and catch for the post method, you can use .then and .catch, 
+    // try and catch for the post method, you can use .then and .catch,
     // but I was taught it is a little old but both work fine I just prefered the try and catch
     //the try catches the data from the user and the params are needed (check api documentation)
-    //It took me a while to understand the params and where to put it 🥲 
+    //It took me a while to understand the params and where to put it 🥲
     // I'm using the metrics system but you can change it in the params: units
     try {
         const response = await axios.get(API_URL, {
@@ -47,15 +47,17 @@ app.post("/get-city", async (req, res) => {
     } catch (error) {
         console.error("Error fetching weather data:", error.message);
         let errorMessage = "City not found. Please try again.";
+        let cityError = city_Name;
         if (error.response) {
             if (error.response.status === 404) {
-                errorMessage = "City not found. Please check the spelling.";
+                cityError = city_Name;
+                errorMessage = `not found. Please check the spelling.`;
             } else if (error.response.status === 401) {
                 errorMessage = "API key error. Please check your API key.";
             }
         }
 
-        res.render("index.ejs", { error: errorMessage });
+        res.render("index.ejs", { error: errorMessage, wrongCity: cityError });
     }
 });
 

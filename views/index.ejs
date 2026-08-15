@@ -26,7 +26,7 @@
                     type="search"
                     name="city"
                     id="city-name"
-                    placeholder="type in your city"
+                    placeholder="type in your location (city, state, country)"
                     autocomplete="off" 
                 />
                 <button type="submit">
@@ -41,6 +41,7 @@
 
               <% if (locals.error) { %>
                 <div id="error-message">
+                    <span>"<%= wrongCity %>"</span>
                     <%= error %>
                 </div>
             <% } %>

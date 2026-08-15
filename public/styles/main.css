@@ -104,6 +104,11 @@ img {
     gap: 10px;
 }
 
+span {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
 h2 {
     font-size: 13px;
     font-weight: 500;
