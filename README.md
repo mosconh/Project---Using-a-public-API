@@ -31,6 +31,7 @@ I started by deciding which API I was going to use, the public APIs were given b
 
    ```bash
    npm install
+   node index.js
     
 
 ### 🫴🏽**Preview**
