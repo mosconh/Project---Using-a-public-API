@@ -33,7 +33,7 @@ I started by deciding which API I was going to use, the public APIs were given b
    npm install
 5. Start the project:
    ```bash
-   node index.js (to run the project)
+   node index.js 
     
 
 ### 🫴🏽**Preview**
