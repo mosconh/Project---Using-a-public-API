@@ -22,7 +22,7 @@ In this project, I was expected to build a website using the Express/Node.js pla
 
 I started by deciding which API I was going to use, the public APIs were given by my instructor, after I that I settled with the Weather API. During the process I was looking for some cool designs for the front-end part, I went with something simple and easy to understand. In my planning I noticed that I should have started with the back-end part. I feel like retrieving data and working with the API was a little difficult and after I read and watched many videos/articles about handling data and was finally able to understand a little bit more and pass the data that the user typed in and send back to the API the requested answer. Overall, it was a very difficult project for me but in the end I felt I learned much more during some simple exercises I did in my course.
 
-## 🚦 Running the Project
+### 🚦 Running the Project
 
 1. Clone the repository.
 2. Open the project in your preferred code editor.
