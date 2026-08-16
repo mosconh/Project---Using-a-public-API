@@ -40,7 +40,7 @@ I started by deciding which API I was going to use, the public APIs were given b
 5. Start the project:
    ```bash
    node index.js
-
+   
 🔑 API Key Setup
 
 This project uses an API key from OpenWeather.
