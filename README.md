@@ -53,4 +53,4 @@ Make sure your .env file is included in .gitignore so that your API key is not u
 
 
 ### 🫴🏽**Preview**
-[![Watch the video]()]()
+[![Watch the video](https://github.com/user-attachments/assets/a2bf1e0c-299c-45f6-aac6-7da1ec876ae0)](https://github.com/user-attachments/assets/a2bf1e0c-299c-45f6-aac6-7da1ec876ae0)
