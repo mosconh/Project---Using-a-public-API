@@ -5,18 +5,24 @@ In this project, I was expected to build a website using the Express/Node.js pla
 
 ### 📜 Technologies
 
-- HTML / CSS
-- Express.js
-- Node.js
-- Axios HTTP
-- EJS for templating
-- VS Code (for writing the code)
+- HTML5 — Page structure
+- CSS3 — Styling and layout
+- Node.js — Runtime environment
+- Express.js — Web server and routing
+- Axios — HTTP requests to the weather API
+- EJS — Server-side templating
+- OpenWeather API — Weather data
+- VS Code — Development environment
 
 ### 📁 Features
 
-- Local server on your own machine
-- Shows weather of your city
-- User friendly (easy to interact)
+- Search for weather by city, state or country
+- Displays current weather information
+- Uses the OpenWeather public API
+- Makes API requests using Axios
+- Runs on a local Express server
+- Simple and user-friendly interface
+- Uses EJS to dynamically display API data
 
 ### 📍The Process
 
