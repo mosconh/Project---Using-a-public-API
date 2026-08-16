@@ -39,7 +39,18 @@ I started by deciding which API I was going to use, the public APIs were given b
    npm install
 5. Start the project:
    ```bash
-   node index.js   
+   node index.js
+
+🔑 API Key Setup
+
+This project uses an API key from OpenWeather.
+
+Create a .env file in the root of the project:
+
+API_KEY=your_api_key_here
+
+Make sure your .env file is included in .gitignore so that your API key is not uploaded to GitHub.
+
 
 ### 🫴🏽**Preview**
 [![Watch the video]()]()
