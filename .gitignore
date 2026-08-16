@@ -1,6 +1,5 @@
 #Project global
 .DS_Store
-node_modules
 
 # Logs
 logs

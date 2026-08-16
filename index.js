@@ -2,13 +2,17 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+
+dotenv.config();
+
 //express app and set the port number.
 const app = express();
 const port = 4000;
 
 // API key and the URL for the public API, the api key is requested I had to create an account on their website.
-const API_KEY = ""; //Use your API KEY from the API website, just create an account and paste here.
-const API_URL = "https://api.openweathermap.org/data/2.5/weather";
+const API_KEY = process.env.API_KEY; //Use your API KEY from the API website, You need to provide your own values. Check the .env.example file
+const API_URL = process.env.API_URL;
 
 // Set EJS as the view engine
 app.set("view engine", "ejs");
