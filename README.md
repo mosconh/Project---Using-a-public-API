@@ -5,8 +5,8 @@ In this project, I was expected to build a website using the Express/Node.js pla
 
 ### 📜 Technologies
 
-- HTML5 — Page structure
-- CSS3 — Styling and layout
+- HTML — Page structure
+- CSS — Styling and layout
 - Node.js — Runtime environment
 - Express.js — Web server and routing
 - Axios — HTTP requests to the weather API
